@@ -5,7 +5,7 @@ GIT_COMMITTER_NAME ?= autohugo
 GIT_COMMITTER_EMAIL ?= autohugo@autohugo.local
 
 # System
-OS = amd64
+OS = 64bit
 ifeq ($(OS),Windows_NT)
     ARCH = windows
 else
@@ -14,7 +14,7 @@ else
 			ARCH = linux
     endif
     ifeq ($(UNAME_S),Darwin)
-			ARCH = darwin
+			ARCH = osx
     endif
 endif
 
@@ -49,7 +49,7 @@ dependencies: init
 		$(MKDIR) $(HUGO_PATH); \
 		cd $(HUGO_PATH); \
 		ext="zip"; \
-		if [ "$(ARCH)" == "linux" ]; then ext="tar.gz"; fi; \
+		if [ "$(ARCH)" == "linux" ]; then ext="tgz"; fi; \
 		file="hugo.$${ext}"; \
 		$(CURL) https://$(HUGO_URL)/releases/download/v$(HUGO_VERSION)/$(HUGO_NAME).$${ext} -o $${file}; \
 		if [ "$(ARCH)" == "linux" ]; then tar -xvzf $${file}; else unzip $${file}; fi; \
