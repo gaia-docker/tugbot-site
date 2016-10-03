@@ -1,0 +1,26 @@
+<footer id="footer">
+    <div class="container">
+
+        <div class="col-md-6 col-md-offset-3 text-center">
+
+        {{ range .Site.Params.social }}
+            <a href="{{ .url }}">
+                 <i class="fa fa-{{ .icon }} fa-fw"></i>
+                 <span class="network-name">{{ .title }}</span>
+            </a>
+        {{ end }}
+
+        </div>
+
+        <div class="col-md-6 col-md-offset-3 text-center">
+            <hr>
+            <p>{{ .Site.Params.copyright }}</p>
+        </div>
+
+    </div>
+    <!-- /.container -->
+</footer>
+
+<!-- /#footer -->
+
+<!-- *** FOOTER END *** -->

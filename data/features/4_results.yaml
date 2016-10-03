@@ -1,0 +1,4 @@
+weight: 3
+name: "Collect Test Results"
+icon: "fa fa-bar-chart"
+description: "Continously collect test results from Test Contaiers. Upload collected test results to Test Analytics REST endpoint."

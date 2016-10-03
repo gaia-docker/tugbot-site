@@ -1,0 +1,4 @@
+weight: 4
+name: "Built for Docker"
+icon: "fa fa-cube"
+description: "Continuous Testing Framework for any distributed application, composed from multiple Docker containers."

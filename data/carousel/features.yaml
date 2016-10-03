@@ -1,0 +1,11 @@
+weight: 2
+title: "Run Tests on Events"
+description: >
+  <ul class="list-style-none">
+     <li>Docker events</li>
+     <li>Host events</li>
+     <li>Configuration changes</li>
+     <li>Timer events</li>
+     <li>API endpoint</li>
+   </ul>
+image: "img/carousel/template-mac.png"

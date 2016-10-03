@@ -1,0 +1,9 @@
+weight: 4
+title: "In-Cluster Testing"
+description: >
+  <ul class="list-style-none">
+    <li>Test in real environment.</li>
+    <li>Realistic infrastructure and configuration.</li>
+    <li>Access internal services and API endpoints</li>
+  </ul>
+image: "img/carousel/tip.jpg"

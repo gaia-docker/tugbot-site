@@ -1,0 +1,4 @@
+weight: 6
+name: "Test Execution on Event"
+icon: "fa fa-bolt"
+description: "Trigger test execution, when something changed: container update, host restart, OS update, etc."

@@ -1,0 +1,11 @@
+weight: 1
+title: "Run on any Docker Cluster"
+description: >
+  <ul class="list-style-none">
+    <li>Docker Swarm</li>
+    <li>Kubernetes</li>
+    <li>CoreOS Fleet</li>
+    <li>AWS ECS</li>
+    <li>DIY Docker Cluster</li>
+  </ul>
+image: "img/carousel/cluster.png"

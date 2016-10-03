@@ -1,0 +1,4 @@
+weight: 2
+name: "Test Discovery"
+icon: "fa fa-search"
+description: "Automatically discover and execute tests, packaged and deployed as regular Docker containers (Test Containers)."
