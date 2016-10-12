@@ -8,13 +8,19 @@ GIT_COMMITTER_EMAIL ?= autohugo@autohugo.local
 OS = 64bit
 ifeq ($(OS),Windows_NT)
     ARCH = windows
+    FILEOS = Windows
+    FOS = 64bit
 else
     UNAME_S := $(shell uname -s)
     ifeq ($(UNAME_S),Linux)
 			ARCH = linux
+      FILEOS = linux
+      FOS = 64bit
     endif
     ifeq ($(UNAME_S),Darwin)
-			ARCH = osx
+			ARCH = MacOS
+      FILEOS = darwin
+      FOS = amd64
     endif
 endif
 
@@ -28,10 +34,11 @@ THEME_PATH := $(THEMES_PATH)/$(THEME_NAME)
 HUGO_PATH := $(BASE_PATH)/.hugo
 HUGO_URL = github.com/spf13/hugo
 HUGO_NAME := hugo_$(HUGO_VERSION)_$(ARCH)-$(OS)
+HUGO_FNAME :=  hugo_$(HUGO_VERSION)_$(FILEOS)_$(FOS)
 
 # Tools
 CURL = curl -L
-HUGO = $(HUGO_PATH)/hugo
+HUGO = $(HUGO_PATH)/$(HUGO_FNAME)/$(HUGO_FNAME)
 MKDIR = mkdir -p
 GIT = git
 
