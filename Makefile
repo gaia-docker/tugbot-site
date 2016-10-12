@@ -15,7 +15,7 @@ else
     ifeq ($(UNAME_S),Linux)
 			ARCH = linux
       FILEOS = linux
-      FOS = 64bit
+      FOS = amd64
     endif
     ifeq ($(UNAME_S),Darwin)
 			ARCH = MacOS
