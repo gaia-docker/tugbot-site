@@ -39,9 +39,13 @@ paginate = 10
     blog = "/blog/:year/:month/:day/:filename/"
 
 [[params.social]]
-    title = "medium"
+    title = "medium-Alexei"
     icon = "medium"
-    url = "https://medium.com/@tugbot"
+    url = "https://medium.com/@alexeiled"
+[[params.social]]
+    title = "medium-Ngehani"
+    icon = "medium"
+    url = "https://medium.com/@GehaniNeil"
 [[params.social]]
     title = "twitter"
     icon = "twitter"
@@ -65,10 +69,10 @@ paginate = 10
     url  = "/install/"
     weight = 2
 
-[[params.menu]]
-    name = "Blog"
-    url  = "/blog/"
-    weight = 3
+#[[params.menu]]
+#    name = "Blog"
+#    url  = "/blog/"
+#    weight = 3
 
 [[params.menu]]
     name = "FAQ"
@@ -104,7 +108,7 @@ paginate = 10
     # at 'exampleSite/data/testimonials'.
     # For more informtion take a look at the README.
     title = "Testimonials"
-    subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
+    subtitle = "Tugbot In-Cluster Open Source Framework has been presented at several Docker and Microservices meetups. Some of the comments we have received:"
 
 [params.see_more]
     enable = true
