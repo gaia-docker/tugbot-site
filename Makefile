@@ -9,17 +9,20 @@ OS = 64bit
 ifeq ($(OS),Windows_NT)
     ARCH = windows
     FILEOS = Windows
-    FOS = 64bit
+    DOS = 64bit
+    FOS = amd64
 else
     UNAME_S := $(shell uname -s)
     ifeq ($(UNAME_S),Linux)
 			ARCH = linux
       FILEOS = linux
+      DOS = amd64
       FOS = amd64
     endif
     ifeq ($(UNAME_S),Darwin)
 			ARCH = MacOS
       FILEOS = darwin
+      DOS = amd64
       FOS = amd64
     endif
 endif
@@ -34,11 +37,12 @@ THEME_PATH := $(THEMES_PATH)/$(THEME_NAME)
 HUGO_PATH := $(BASE_PATH)/.hugo
 HUGO_URL = github.com/spf13/hugo
 HUGO_NAME := hugo_$(HUGO_VERSION)_$(ARCH)-$(OS)
-HUGO_FNAME :=  hugo_$(HUGO_VERSION)_$(FILEOS)_$(FOS)
+HUGO_FNAME := hugo_$(HUGO_VERSION)_$(FILEOS)_$(FOS)
+HUGO_DNAME := hugo_$(HUGO_VERSION)_$(FILEOS)_$(DOS)
 
 # Tools
 CURL = curl -L
-HUGO = $(HUGO_PATH)/$(HUGO_FNAME)/$(HUGO_FNAME)
+HUGO = $(HUGO_PATH)/$(HUGO_DNAME)/$(HUGO_FNAME)
 MKDIR = mkdir -p
 GIT = git
 
