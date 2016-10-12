@@ -8,13 +8,22 @@ GIT_COMMITTER_EMAIL ?= autohugo@autohugo.local
 OS = 64bit
 ifeq ($(OS),Windows_NT)
     ARCH = windows
+    FILEOS = Windows
+    DOS = 64bit
+    FOS = amd64
 else
     UNAME_S := $(shell uname -s)
     ifeq ($(UNAME_S),Linux)
 			ARCH = linux
+      FILEOS = linux
+      DOS = amd64
+      FOS = amd64
     endif
     ifeq ($(UNAME_S),Darwin)
-			ARCH = osx
+			ARCH = MacOS
+      FILEOS = darwin
+      DOS = amd64
+      FOS = amd64
     endif
 endif
 
@@ -28,10 +37,12 @@ THEME_PATH := $(THEMES_PATH)/$(THEME_NAME)
 HUGO_PATH := $(BASE_PATH)/.hugo
 HUGO_URL = github.com/spf13/hugo
 HUGO_NAME := hugo_$(HUGO_VERSION)_$(ARCH)-$(OS)
+HUGO_FNAME := hugo_$(HUGO_VERSION)_$(FILEOS)_$(FOS)
+HUGO_DNAME := hugo_$(HUGO_VERSION)_$(FILEOS)_$(DOS)
 
 # Tools
 CURL = curl -L
-HUGO = $(HUGO_PATH)/hugo
+HUGO = $(HUGO_PATH)/$(HUGO_DNAME)/$(HUGO_FNAME)
 MKDIR = mkdir -p
 GIT = git
 
@@ -49,7 +60,7 @@ dependencies: init
 		$(MKDIR) $(HUGO_PATH); \
 		cd $(HUGO_PATH); \
 		ext="zip"; \
-		if [ "$(ARCH)" == "linux" ]; then ext="tgz"; fi; \
+		if [ "$(ARCH)" == "linux" ]; then ext="tar.gz"; fi; \
 		file="hugo.$${ext}"; \
 		$(CURL) https://$(HUGO_URL)/releases/download/v$(HUGO_VERSION)/$(HUGO_NAME).$${ext} -o $${file}; \
 		if [ "$(ARCH)" == "linux" ]; then tar -xvzf $${file}; else unzip $${file}; fi; \
