@@ -1,8 +1,8 @@
 weight: 2
-title: "Run on any Docker Cluster"
+title: "Run in any Docker Cluster"
 description: >
   <ul class="list-style-none">
-    <li>Docker Swarm</li>
+    <li>Swarm</li>
     <li>Kubernetes</li>
     <li>CoreOS Fleet</li>
     <li>AWS ECS</li>

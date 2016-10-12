@@ -1,4 +1,4 @@
-weight: 5
+weight: 2
 name: "In-Cluster Testing"
 icon: "fa fa-cubes"
-description: "Run any tests inside your Docker cluster, in realistic environment: testing, staging or production. Support for Swarm and Kubernetes clusters."
+description: "Run any tests inside your Docker cluster, in real environment: test, stage, or production. Support for Swarm and Kubernetes clusters."

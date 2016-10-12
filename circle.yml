@@ -1,6 +1,6 @@
 machine:
   environment:
-    HUGO_VERSION: 0.16
+    HUGO_VERSION: 0.17
     HUGO_THEME: https://github.com/devcows/hugo-universal-theme
 
 dependencies:

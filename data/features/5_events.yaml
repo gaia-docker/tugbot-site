@@ -1,4 +1,4 @@
-weight: 6
-name: "Test Execution on Event"
+weight: 5
+name: "Event Driven Test Execution"
 icon: "fa fa-bolt"
-description: "Trigger test execution, when something changed: container update, host restart, OS update, etc."
+description: "Trigger test execution when something changed: container update, host restart, OS update, etc. Selective tests based on specific events"

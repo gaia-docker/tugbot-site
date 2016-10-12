@@ -1,4 +1,4 @@
-weight: 1
-name: "Any Testing Tool"
+weight: 3
+name: "Any Test - Any Tool"
 icon: "fa fa-gears"
-description: "Support any testing tool, packaged into Test Container."
+description: "Supports any test using any tool with a few lines packaged as a Test Container in a standard Dockerfile."

@@ -1,4 +1,4 @@
-weight: 2
-name: "Test Discovery"
+weight: 6
+name: "Social Testing and Discovery"
 icon: "fa fa-search"
-description: "Automatically discover and execute tests, packaged and deployed as regular Docker containers (Test Containers)."
+description: "Automatically discover and execute tests, packaged and deployed as regular Docker containers (Test Containers). Enable social-testing by sharing test containers via a registry"

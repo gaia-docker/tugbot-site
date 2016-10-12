@@ -1,8 +1,8 @@
 weight: 4
-title: "Run Tests on Events"
+title: "Event Driven Testing"
 description: >
   <ul class="list-style-none">
-     <li>Docker, Kubernetes, Mesos-Marathon events</li>
+     <li>Swarm, Kubernetes, Mesos-Marathon</li>
      <li>Host events</li>
      <li>Configuration changes</li>
      <li>Timer events</li>

@@ -75,10 +75,10 @@ paginate = 10
     url  = "/faq/"
     weight = 4
 
-[[params.menu]]
-    name = "Contact"
-    url  = "/contact/"
-    weight = 5
+#[[params.menu]]
+#    name = "Contact"
+#    url  = "/contact/"
+#    weight = 5
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]
