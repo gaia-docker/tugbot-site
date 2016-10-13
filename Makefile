@@ -75,14 +75,13 @@ build: dependencies
 	$(HUGO) -t $(THEME_NAME)
 
 server: build
-	$(HUGO) server -t $(THEME_NAME) -D -w
+	$(HUGO) --theme $(THEME_NAME) --buildDrafts --verbose
 
 publish: init
 	@if [ "$(CI)" == "" ]; then \
 		echo "ERROR! Publish should be called only on CircleCI"; \
 	  exit 1; \
 	fi;
-	cp -rf $(THEME_PATH)/static/* $(PUBLIC_PATH)/
 	rm .gitignore
 	$(GIT) config user.email "$(GIT_COMMITTER_EMAIL)"
 	$(GIT) config user.name "$(GIT_COMMITTER_NAME)"
