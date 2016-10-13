@@ -27,7 +27,13 @@ In a recent NGINX (developer focused) [survey](https://www.nginx.com/resources/l
 
 ## How do I get Tugbot
 
-It’s really simple to get started. Developers can go to our github repository and download [Tugbot](https://github.com/gaia-docker/tugbot). Feedback can be provided directly to our team via our Slack channel at [tugbot.slack.com](https://tugbot.slack.com) or visit [tugbot.io](http://tugbot.io). You can clone our [DEMO app](https://github.com/gaia-docker/example-voting-app). The DEMO app allows you to deploy in standalone, Swarm, or [Kubernetes](https://github.com/gaia-docker/tugbot-kubernetes) cluster environments. We also demonstrate the use of our [chaos engineering tool](https://github.com/gaia-adm/pumba) (Pumba) to simulate chaos and network delays and failures to ensure resiliency of your system. 
+It’s really simple to get started. Developers can go to our github repository and download [Tugbot](https://github.com/gaia-docker/tugbot). Feedback can be provided directly to our team via our Slack channel at [tugbot.slack.com](https://tugbot.slack.com) or visit [tugbot.io](http://tugbot.io). The best way to get started quickly is by cloning our [DEMO app](https://github.com/gaia-docker/example-voting-app). 
+
+```git clone https://github.com/gaia-docker/example-voting-app.git```
+
+Please note the [pre-requisites and guide](https://github.com/gaia-docker/example-voting-app/blob/master/DEMO-FLOW.md) for using the DEMO app.
+
+The DEMO app allows you to deploy in standalone, Swarm, or [Kubernetes](https://github.com/gaia-docker/tugbot-kubernetes) cluster environments. We also demonstrate the use of our [chaos engineering tool](https://github.com/gaia-adm/pumba) (Pumba) to simulate chaos and network delays and failures to ensure resiliency of your system. 
 
 ## How do I collaborate with you on Tugbot?
 
