@@ -108,7 +108,7 @@ paginate = 10
     # at 'exampleSite/data/testimonials'.
     # For more informtion take a look at the README.
     title = "Testimonials"
-    subtitle = "Tugbot In-Cluster Open Source Framework has been presented at several Docker and Microservices meetups. Some of the comments we have received:"
+    subtitle = "Tugbot In-Cluster Open Source Framework presented at Docker and Microservices meetups:"
 
 [params.see_more]
     enable = true
