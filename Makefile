@@ -95,7 +95,7 @@ publish_to_s3: init
 		echo "ERROR! Publish should be called only on CircleCI"; \
 	  exit 1; \
 	fi;
-  aws s3 sync public s3://tugbot-site/ --delete
+	aws s3 sync public s3://tugbot-site/ --delete
 
 clean:
 	rm -rf $(HUGO_PATH)
