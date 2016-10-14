@@ -16,3 +16,4 @@ deployment:
     branch: master
     commands:
       - make publish
+      - make publish_to_s3
