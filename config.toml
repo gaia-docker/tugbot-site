@@ -1,4 +1,4 @@
-baseurl = "https://gaia-docker.github.io/tugbot-site/"
+baseurl = "https://tugbot.io/"
 title = "Tugbot"
 theme = "hugo-universal-theme"
 languageCode = "en-us"
