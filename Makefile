@@ -90,6 +90,13 @@ publish: init
 	$(GIT) push origin :gh-pages || true
 	$(GIT) subtree push --prefix=public git@github.com:$(CIRCLE_PROJECT_USERNAME)/$(CIRCLE_PROJECT_REPONAME).git gh-pages
 
+publish_to_s3: init
+	@if [ "$(CI)" == "" ]; then \
+		echo "ERROR! Publish should be called only on CircleCI"; \
+	  exit 1; \
+	fi;
+  aws s3 sync public s3://tugbot-site/ --delete
+
 clean:
 	rm -rf $(HUGO_PATH)
 	rm -rf $(THEME_PATH)
