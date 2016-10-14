@@ -1,4 +1,4 @@
-baseurl = "https://tugbot.io/"
+baseurl = "https://www.tugbot.io/"
 title = "Tugbot"
 theme = "hugo-universal-theme"
 languageCode = "en-us"
