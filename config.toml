@@ -49,15 +49,15 @@ paginate = 10
 [[params.social]]
     title = "twitter"
     icon = "twitter"
-    url = "https://twitter.com/tugbot"
+    url = "https://twitter.com/tugbotio"
 [[params.social]]
     title = "github"
     icon = "github"
     url = "https://github.com/gaia-docker/tugbot"
-[[params.social]]
-    title = "youtube"
-    icon = "youtube"
-    url = "https://www.youtube.com/user/tugbot"
+#[params.social]]
+#    title = "youtube"
+#    icon = "youtube"
+#    url = "https://www.youtube.com/user/tugbot"
 
 [[params.menu]]
     name = "Home"
