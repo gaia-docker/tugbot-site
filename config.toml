@@ -13,7 +13,7 @@ googleAnalytics = ""
 paginate = 10
 
 [params]
-    viewMorePostLink     = "/blog/index.html"
+    viewMorePostLink     = "/blog.html"
     author = "DevTugbot"
 
     # Since this template is static, the contact form uses www.formspree.io as a
@@ -67,7 +67,7 @@ paginate = 10
 
 [[params.menu]]
     name = "Install"
-    url  = "/install/index.html"
+    url  = "/install.html"
     weight = 2
 
 #[[params.menu]]
@@ -77,12 +77,12 @@ paginate = 10
 
 [[params.menu]]
     name = "FAQ"
-    url  = "/faq/index.html"
+    url  = "/faq.html"
     weight = 4
 
 #[[params.menu]]
 #    name = "Contact"
-#    url  = "/contact/index.html"
+#    url  = "/contact.html"
 #    weight = 5
 
 # Enable and disable widgets for the right sidebar
