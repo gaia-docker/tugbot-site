@@ -1,4 +1,4 @@
 weight: 3
 name: "Any Test - Any Tool"
-icon: "fa fa-gears"
+icon: "fa fa-cogs"
 description: "Supports any test using any tool with a few lines packaged as a Test Container in a standard Dockerfile."
