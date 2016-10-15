@@ -3,6 +3,7 @@ title = "Tugbot"
 theme = "hugo-universal-theme"
 languageCode = "en-us"
 canonifyurls = true
+uglyURLs = true
 # Enable comments by entering your Disqus shortname
 disqusShortname = "devtugbot"
 # Enable Google Analytics by entering your tracking code
@@ -12,7 +13,7 @@ googleAnalytics = ""
 paginate = 10
 
 [params]
-    viewMorePostLink     = "/blog/"
+    viewMorePostLink     = "/blog/index.html"
     author = "DevTugbot"
 
     # Since this template is static, the contact form uses www.formspree.io as a
@@ -61,27 +62,27 @@ paginate = 10
 
 [[params.menu]]
     name = "Home"
-    url  = "/"
+    url  = "/index.html"
     weight = 1
 
 [[params.menu]]
     name = "Install"
-    url  = "/install/"
+    url  = "/install/index.html"
     weight = 2
 
 #[[params.menu]]
 #    name = "Blog"
-#    url  = "/blog/"
+#    url  = "/blog/index.html"
 #    weight = 3
 
 [[params.menu]]
     name = "FAQ"
-    url  = "/faq/"
+    url  = "/faq/index.html"
     weight = 4
 
 #[[params.menu]]
 #    name = "Contact"
-#    url  = "/contact/"
+#    url  = "/contact/index.html"
 #    weight = 5
 
 # Enable and disable widgets for the right sidebar
