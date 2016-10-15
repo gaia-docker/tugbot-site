@@ -77,13 +77,18 @@ build: dependencies
 server: build
 	$(HUGO) --theme $(THEME_NAME) --buildDrafts --verbose
 
-publish: init
+sed_to_github: init
+	-grep -rl "https://www.tugbot.io" public | xargs sed -i '' 's|https://www.tugbot.io|https://gaia-docker.github.io/tugbot-site|g'
+
+sed_to_s3: init
+	-grep -rl "https://gaia-docker.github.io" public | xargs sed -i '' 's|https://gaia-docker.github.io/tugbot-site|https://www.tugbot.io|g'
+
+publish: sed_to_github
 	@if [ "$(CI)" == "" ]; then \
 		echo "ERROR! Publish should be called only on CircleCI"; \
 		exit 1; \
 	fi;
 	rm .gitignore
-	-grep -rl "https://www.tugbot.io" public | xargs sed -i '' "s|https://www.tugbot.io|https://gaia-docker.github.io/tugbot-site|g"
 	$(GIT) config user.email "$(GIT_COMMITTER_EMAIL)"
 	$(GIT) config user.name "$(GIT_COMMITTER_NAME)"
 	$(GIT) add -A
@@ -91,12 +96,11 @@ publish: init
 	$(GIT) push origin :gh-pages || true
 	$(GIT) subtree push --prefix=public git@github.com:$(CIRCLE_PROJECT_USERNAME)/$(CIRCLE_PROJECT_REPONAME).git gh-pages
 
-publish_to_s3: init
+publish_to_s3: sed_to_s3
 	@if [ "$(CI)" == "" ]; then \
 		echo "ERROR! Publish should be called only on CircleCI"; \
 		exit 1; \
 	fi;
-	-grep -rl "https://gaia-docker.github.io/tugbot-site/" public | xargs sed -i '' "s|https://gaia-docker.github.io/tugbot-site|https://www.tugbot.io|g"
 	aws s3 sync public s3://tugbot-site/ --delete
 
 clean:
