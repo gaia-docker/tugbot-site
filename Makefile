@@ -78,10 +78,12 @@ server: build
 	$(HUGO) --theme $(THEME_NAME) --buildDrafts --verbose
 
 sed_to_github: init
-	-grep -rl "https://www.tugbot.io" public | xargs sed -i '' 's|https://www.tugbot.io|https://gaia-docker.github.io/tugbot-site|g'
+	-grep -rl "https://www.tugbot.io" public | xargs sed -i.bak 's|https://www.tugbot.io|https://gaia-docker.github.io/tugbot-site|g'
+	-find public -type f -name '*.bak' -delete
 
 sed_to_s3: init
-	-grep -rl "https://gaia-docker.github.io" public | xargs sed -i '' 's|https://gaia-docker.github.io/tugbot-site|https://www.tugbot.io|g'
+	-grep -rl "https://gaia-docker.github.io" public | xargs sed -i.bak 's|https://gaia-docker.github.io/tugbot-site|https://www.tugbot.io|g'
+	-find public -type f -name '*.bak' -delete
 
 publish: sed_to_github
 	@if [ "$(CI)" == "" ]; then \
