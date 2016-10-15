@@ -27,13 +27,21 @@ In a recent NGINX (developer focused) [survey](https://www.nginx.com/resources/l
 
 ## How do I get Tugbot
 
-It’s really simple to get started. Developers can go to our github repository and download [Tugbot](https://github.com/gaia-docker/tugbot). Feedback can be provided directly to our team via our Slack channel at [tugbot.slack.com](https://tugbot.slack.com) or visit [tugbot.io](http://tugbot.io). The best way to get started quickly is by cloning our [DEMO app](https://github.com/gaia-docker/example-voting-app). 
+It’s really simple to get started. Developers can go to our github repository and download [Tugbot](https://github.com/gaia-docker/tugbot). Feedback can be provided directly to our team via our Slack channel at [tugbot.slack.com](https://tugbot.slack.com) or visit [tugbot.io](http://tugbot.io). Tugbot consists of the following core [services](https://github.com/gaia-docker):
+
+* [Tugbot run](https://github.com/gaia-docker/tugbot)
+* [Tugbot collect](https://github.com/gaia-docker/tugbot-collect)
+* [Tugbot results](https://github.com/gaia-docker/tugbot-result-service)
+* Docker Swarm: [Tugbot Swarm](https://github.com/gaia-docker/tugbot-leader) - This is the **Tugbot run** service for Swarm.
+* Kubenertes: [Tugbot Kubernetes](https://github.com/gaia-docker/tugbot-kubernetes) - This is the **Tugbot run** service for Kubernetes.
+
+The best way to get started quickly is by cloning our [DEMO app](https://github.com/gaia-docker/example-voting-app). 
 
 ```git clone https://github.com/gaia-docker/example-voting-app.git```
 
 Please note the [pre-requisites and guide](https://github.com/gaia-docker/example-voting-app/blob/master/DEMO-FLOW.md) for using the DEMO app.
 
-The DEMO app allows you to deploy in standalone, Swarm, or [Kubernetes](https://github.com/gaia-docker/tugbot-kubernetes) cluster environments. We also demonstrate the use of our [chaos engineering tool](https://github.com/gaia-adm/pumba) (Pumba) to simulate chaos and network delays and failures to ensure resiliency of your system. 
+The DEMO app allows you to deploy in standalone, [Swarm](https://github.com/gaia-docker/tugbot-leader), or [Kubernetes](https://github.com/gaia-docker/tugbot-kubernetes) cluster environments. We also demonstrate the use of our [chaos engineering tool](https://github.com/gaia-adm/pumba) (Pumba) to simulate chaos with network delays and failures to ensure resiliency of your system. 
 
 ## How do I collaborate with you on Tugbot?
 
@@ -41,9 +49,9 @@ You can join our [Slack Channel](https://tugbot.slack.com/). You can also open i
 
 ## Where do you intend to take Tugbot?
 
-We envision community based contributions of base "test container images" in the Docker Registry. Just like Github has enabled "social coding", Tugbot promotes "social testing".  No special configuring of test packages per deployment environment. Tests can be on-demand and event driven (e.g. docker events, timer, host, etc). Results collections are standardized for tests of services owned by the teams. They can visualize them via our integrated solution ("Gaia" -- coming soon) based open source tools like ElasticSearch with Kibana. For a portfolio and enterprise view, customers can use our commercial tools like [ALM Octane](https://saas.hpe.com/en-us/software/alm-octane) (future integrations).
+We envision community based contributions of base "test container images" in a Docker Registry. Just like Github has enabled "social coding", Tugbot promotes "social testing".  No special configuring of test packages per deployment environment. Tests can be on-demand and event driven (e.g. docker events, timer, host, etc). Results collections are standardized for tests of services owned by the teams. They can visualize them via our integrated solution ("Gaia" -- coming soon) based open source tools like ElasticSearch with Kibana. For a portfolio and enterprise view, customers can use our commercial tools like [ALM Octane](https://saas.hpe.com/en-us/software/alm-octane) (future integrations).
 
-## How to prepare image for Tugbot test container?
+## How to create a Tugbot test container image?
 
 It's very easy to create a test container. All it requires is a few lines of code in a Dockerfile ([example](https://github.com/gaia-docker/example-voting-app/blob/master/tests/Dockerfile)). We leverage the Docker and Kubenertes events API and LABELs to describe the test container that will enable Tugbot to automatically detect, run, and capture results when running in a cluster. 
 
@@ -60,4 +68,4 @@ You can go to our [github repo](https://github.com/gaia-docker/tugbot) to learn 
     *  Reddit Comment: I agree with [/u/ihsw](https://www.reddit.com/u/ihsw) -- great article, this sub needs more content like this (instead of "This One Weird Trick" junk or another wordpress tutorial). And, it's very helpful to see this concept explained clearly and succinctly. I imagine this is going to be one of those posts that I constantly google to send to people
 * [Testing Strategies for Docker Containers](https://medium.com/@alexeiled/testing-strategies-for-docker-containers-f633e261e75a#.xxq0y7vig)
 
-Join the [Tugbot community](https://tugbot.slack.com/) to learn more
+Join the [Tugbot developer community](https://tugbot.slack.com/) to learn more
