@@ -7,24 +7,24 @@ GIT_COMMITTER_EMAIL ?= autohugo@autohugo.local
 # System
 OS = 64bit
 ifeq ($(OS),Windows_NT)
-    ARCH = windows
-    FILEOS = Windows
-    DOS = 64bit
-    FOS = amd64
+	ARCH = windows
+	FILEOS = Windows
+	DOS = 64bit
+	FOS = amd64
 else
-    UNAME_S := $(shell uname -s)
-    ifeq ($(UNAME_S),Linux)
-			ARCH = linux
-      FILEOS = linux
-      DOS = amd64
-      FOS = amd64
-    endif
-    ifeq ($(UNAME_S),Darwin)
-			ARCH = MacOS
-      FILEOS = darwin
-      DOS = amd64
-      FOS = amd64
-    endif
+	UNAME_S := $(shell uname -s)
+	ifeq ($(UNAME_S),Linux)
+		ARCH = linux
+		FILEOS = linux
+		DOS = amd64
+		FOS = amd64
+	endif
+	ifeq ($(UNAME_S),Darwin)
+		ARCH = MacOS
+		FILEOS = darwin
+		DOS = amd64
+		FOS = amd64
+	endif
 endif
 
 # Environment
@@ -52,7 +52,7 @@ all: build
 init:
 	@if [ "$(HUGO_THEME)" == "" ]; then \
 		echo "ERROR! Please set the env variable 'HUGO_THEME' (http://mcuadros.github.io/autohugo/documentation/working-with-autohugo/)"; \
-	  exit 1; \
+		exit 1; \
 	fi;
 
 dependencies: init
@@ -80,9 +80,10 @@ server: build
 publish: init
 	@if [ "$(CI)" == "" ]; then \
 		echo "ERROR! Publish should be called only on CircleCI"; \
-	  exit 1; \
+		exit 1; \
 	fi;
 	rm .gitignore
+	-grep -rl "https://www.tugbot.io" public | xargs sed -i '' "s|https://www.tugbot.io|https://gaia-docker.github.io/tugbot-site|g"
 	$(GIT) config user.email "$(GIT_COMMITTER_EMAIL)"
 	$(GIT) config user.name "$(GIT_COMMITTER_NAME)"
 	$(GIT) add -A
@@ -93,8 +94,9 @@ publish: init
 publish_to_s3: init
 	@if [ "$(CI)" == "" ]; then \
 		echo "ERROR! Publish should be called only on CircleCI"; \
-	  exit 1; \
+		exit 1; \
 	fi;
+	-grep -rl "https://gaia-docker.github.io/tugbot-site/" public | xargs sed -i '' "s|https://gaia-docker.github.io/tugbot-site|https://www.tugbot.io|g"
 	aws s3 sync public s3://tugbot-site/ --delete
 
 clean:
