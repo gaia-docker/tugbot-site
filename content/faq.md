@@ -81,4 +81,4 @@ You can go to our [github repo](https://github.com/gaia-docker/tugbot) to learn 
     *  Reddit Comment: I agree with [/u/ihsw](https://www.reddit.com/u/ihsw) -- great article, this sub needs more content like this (instead of "This One Weird Trick" junk or another wordpress tutorial). And, it's very helpful to see this concept explained clearly and succinctly. I imagine this is going to be one of those posts that I constantly google to send to people
 * [Testing Strategies for Docker Containers](https://medium.com/@alexeiled/testing-strategies-for-docker-containers-f633e261e75a#.xxq0y7vig)
 
-Join the [Tugbot developer community](https://tugbot.slack.com/) to learn more
+Join the [Tugbot community](https://tugbot-public.slack.com/) to learn more. For Developers & Contributors, please join us at this [Slack channel](https://tugbot.slack.com).
