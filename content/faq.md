@@ -25,7 +25,7 @@ Tugbot is in-cluster Continuous Testing Framework for Docker based runtime envir
 
 ## Why Tugbot?
 
-In a recent NGINX (developer focused) [survey](https://www.nginx.com/resources/library/app-dev-survey/), the biggest challenge holding back developers is having to constantly trade-off between quality and expected speed of delivery in multiple and complex environment with a lack of automation tools.Tugbot extends testing into deployment environments. It executes tests in response to different change events or periodically, collects test results and upload collected results to Test Analytics service. Tugbot is intended to make continuous testing REAL by running event driven tests in the Continuous Delivery phase of the software development lifecycle.
+In a recent NGINX (developer focused) [survey](https://www.nginx.com/resources/library/app-dev-survey/), the biggest challenge holding back developers is having to constantly trade-off between quality and expected speed of delivery in multiple and complex environments that lack automation tools. Tugbot extends testing into continuous deployment (CD) environments. It executes tests in response to change events or periodically, collects test results, and uploads collected results to Test Analytics service. Tugbot is intended to make continuous testing REAL by running event driven tests in the Continuous Delivery (CD) phase of the software development lifecycle.
 
 #### Use Cases for Tugbot Framework for modern "2 pizza" development teams:
 
