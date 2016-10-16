@@ -29,7 +29,7 @@ paginate = 10
     # - you're done. Happy mailing!
     #
     # Enable the contact form by entering your Formspree.io email
-    email = "contact@tugbot.io"
+    email = "tugbot@hpe.com"
 
     about_us = "<p>Tugbot development team.</p>"
     copyright = "Copyright (c), Hewlett-Packard Enterprise"
