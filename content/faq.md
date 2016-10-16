@@ -6,6 +6,8 @@ title = "FAQ"
 
 Tugbot is an open source framework for testing microservice architecture applications.  It executes tests, collects data, and report the results.  In a microservice architecture based application, testing, correlation, and traceability of tests to services, results, failures with test and environment context are extremely complex.  Discovering patterns and trends to resolve issues quickly at the team level creates significant challenges. Tugbot is created to address these challenges. 
 
+#### Simplify Testing in Continuous Delivery (CD) phase 
+
 It's common practice to run tests as part of a CI build flow. There are some problems with this default approach. Here is just a small list of problems:
 
 * It's not easy to create a realistic test environment (close to production) with underlying infrastructure and different configurations.
@@ -25,7 +27,18 @@ Tugbot is in-cluster Continuous Testing Framework for Docker based runtime envir
 
 In a recent NGINX (developer focused) [survey](https://www.nginx.com/resources/library/app-dev-survey/), the biggest challenge holding back developers is having to constantly trade-off between quality and expected speed of delivery in multiple and complex environment with a lack of automation tools.Tugbot extends testing into deployment environments. It executes tests in response to different change events or periodically, collects test results and upload collected results to Test Analytics service. Tugbot is intended to make continuous testing REAL by running event driven tests in the Continuous Delivery phase of the software development lifecycle.
 
-## How do I get Tugbot
+#### Use Cases for Tugbot Framework for modern "2 pizza" development teams:
+
+1. Simplify and standardize running ANY test (integration, component, performance, chaos, security, etc) using a standard Dockerfile — A “test container”, agnostic of the tooling. Allows for testing of complex backing services.
+2. Event driven testing - Trigger test on specific events to reduce execution times by providing granularity and parellism.
+  * Docker events: image update, new container, etc (supported)
+  * Timer events: CRON — time interval, etc
+  * Host events: kernel updates, host restart, package update, config update
+  * External event: User driven, etc
+3. Standardize collection of test results from all machines - Aggregating and analyzing test results over time enables traceability and correlation of tests, failures, and results with deployment event context to speed up resolution.
+4. "Social Testing - By creating "test containers", these can be shared by development teams with their peers and the community. 
+
+## How do I get Tugbot?
 
 It’s really simple to get started. Developers can go to our github repository and download [Tugbot](https://github.com/gaia-docker/tugbot). Feedback can be provided directly to our team via our Slack channel at [tugbot.slack.com](https://tugbot.slack.com) or visit [tugbot.io](http://tugbot.io). Tugbot consists of the following core [services](https://github.com/gaia-docker):
 
