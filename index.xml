@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tugbot</title>
+    <link>https://gaia-docker.github.io/tugbot-site/index.xml</link>
+    <description>Recent content on Tugbot</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c), Hewlett-Packard Enterprise</copyright>
+    <atom:link href="https://gaia-docker.github.io/tugbot-site/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Contact</title>
+      <link>https://gaia-docker.github.io/tugbot-site/contact.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaia-docker.github.io/tugbot-site/contact.html</guid>
+      <description>
+
+&lt;h1 id=&#34;we-are-here-to-help-you&#34;&gt;We are here to help you&lt;/h1&gt;
+
+&lt;p&gt;Are you curious about something? Do you have some kind of problem with our products? As am hastily invited settled at limited civilly fortune me. Really spring in extent an by. Judge but built gay party world. Of so am he remember although required. Bachelor unpacked be advanced at. Confined in declared marianne is vicinity.&lt;/p&gt;
+
+&lt;p&gt;Please feel free to contact us, our customer service center is working for you &lt;sup&gt;24&lt;/sup&gt;&amp;frasl;&lt;sub&gt;7&lt;/sub&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Creating your own site</title>
+      <link>https://gaia-docker.github.io/tugbot-site/blog/1/01/01/setting-your-own/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaia-docker.github.io/tugbot-site/blog/1/01/01/setting-your-own/</guid>
+      <description>
+
+&lt;h3 id=&#34;setting-the-repository&#34;&gt;Setting the repository&lt;/h3&gt;
+
+&lt;p&gt;The best way to archive this is forking the &lt;a href=&#34;https://github.com/mcuadros/autohugo&#34;&gt;&lt;code&gt;autohugo&lt;/code&gt;&lt;/a&gt; repository. This repository will host your &lt;a href=&#34;https://es.wikipedia.org/wiki/Markdown&#34;&gt;Markdown&lt;/a&gt; files and the hugo config file.&lt;/p&gt;
+
+&lt;h3 id=&#34;setting-circleci&#34;&gt;Setting CircleCI&lt;/h3&gt;
+
+&lt;p&gt;CircleCI takes care of the branch &lt;code&gt;gh-pages&lt;/code&gt;, deploying the new version of the HTML every time you make a push to your repository in the &lt;a href=&#34;https://pages.github.com/&#34;&gt;Github Pages&lt;/a&gt; branch.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Login on &lt;a href=&#34;https://circleci.com/&#34;&gt;CircleCI&lt;/a&gt; using you Github account.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Register you repository at CircleCI clicking on &lt;a href=&#34;https://circleci.com/add-projects&#34;&gt;&lt;code&gt;Add Projects&lt;/code&gt;&lt;/a&gt; and choosing your repository.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Now you need to allow to CircleCI to make pushes to your &lt;code&gt;gh-pages&lt;/code&gt; branch, so just go to CircleCI, in &lt;code&gt;Project Settings&lt;/code&gt; &amp;gt; &lt;code&gt;Checkout keys&lt;/code&gt; click on the big green button &lt;code&gt;Authorize w/ Github&lt;/code&gt;, then a new button with emerge called &lt;code&gt;Create and add your/repository deploy key&lt;/code&gt; click on it also, this will create a token write access, allowing to CircleCI write on your repository.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;configuring-hugo&#34;&gt;Configuring Hugo&lt;/h3&gt;
+
+&lt;p&gt;Hugo is a static website engine, transforms your Markdown files into beautiful websites.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Configure a theme for your new site, you can choose one at &lt;a href=&#34;https://github.com/spf13/hugoThemes/&#34;&gt;&lt;code&gt;hugoThemes&lt;/code&gt;&lt;/a&gt; repository, set the theme&amp;rsquo;s repository URL (with the &lt;code&gt;http://&lt;/code&gt; prefix) at the file &lt;code&gt;circle.yml&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Put the your content at the directory &lt;code&gt;content&lt;/code&gt;, read more about the scaffolding at the &lt;a href=&#34;https://gohugo.io/content/organization/&#34;&gt;&lt;code&gt;content section&lt;/code&gt;&lt;/a&gt; in the hugo documentation.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Configure the &lt;code&gt;config.yaml&lt;/code&gt; this file containts the hugo configuration, there you can config for example the site name.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If you are not familiar with the &lt;code&gt;hugo&lt;/code&gt; scaffolding and confiration take a look to the hugo &lt;a href=&#34;https://gohugo.io/overview/introduction/&#34;&gt;&lt;code&gt;documentation&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;publishing-the-site&#34;&gt;Publishing the site&lt;/h3&gt;
+
+&lt;p&gt;This is the easiest part, thanks to &lt;a href=&#34;https://pages.github.com/&#34;&gt;Github Pages&lt;/a&gt; all the content in the &lt;code&gt;gh-pages&lt;/code&gt; branch from you repository is available via HTTP at:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;http://&amp;lt;username&amp;gt;.github.io/&amp;lt;repository&amp;gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Since now every time you make a push to your repository with new content, the HTML will be generated and uploaded to the &lt;code&gt;gh-pages&lt;/code&gt; thanks to &lt;code&gt;CircleCI&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The Markdown files on content as well as the &lt;code&gt;config.yaml&lt;/code&gt; are examples, feel free to change any you want.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>FAQ</title>
+      <link>https://gaia-docker.github.io/tugbot-site/faq.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaia-docker.github.io/tugbot-site/faq.html</guid>
+      <description>
+
+&lt;h2 id=&#34;what-is-tugbot&#34;&gt;What is Tugbot?&lt;/h2&gt;
+
+&lt;p&gt;Tugbot is an open source framework for testing microservice architecture applications.  It executes tests, collects data, and report the results.  In a microservice architecture based application, testing, correlation, and traceability of tests to services, results, failures with test and environment context are extremely complex.  Discovering patterns and trends to resolve issues quickly at the team level creates significant challenges. Tugbot is created to address these challenges.&lt;/p&gt;
+
+&lt;h4 id=&#34;simplify-testing-in-continuous-delivery-cd-phase&#34;&gt;Simplify Testing in Continuous Delivery (CD) phase&lt;/h4&gt;
+
+&lt;p&gt;It&amp;rsquo;s common practice to run tests as part of a CI build flow. There are some problems with this default approach. Here is just a small list of problems:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;It&amp;rsquo;s not easy to create a realistic test environment (close to production) with underlying infrastructure and different configurations.&lt;/li&gt;
+&lt;li&gt;Integration tests might require access to &amp;ldquo;non-exposed&amp;rdquo; services and also highly depend on infrastructure and configuration.&lt;/li&gt;
+&lt;li&gt;Some tests takes too long to run during CI build, for example: performance/stress tests, security tests, scans, background job tests, etc. Selecting the appropriate tests for CI job is always a balance between speed and simplicity of execution and &amp;ldquo;safety net&amp;rdquo; (how many tests need to be run to feel safe).&lt;/li&gt;
+&lt;li&gt;Microservices architecture (tens and hundreds of micro services) and Continuous Deployment (CD) creates significant &lt;a href=&#34;http://martinfowler.com/articles/microservice-testing/&#34;&gt;complexities&lt;/a&gt;. Now every service has a separate CI pipeline for build/test/deploy and teams can achieve multiple deployments per day. Running too many tests or integration tests for each commit is a huge overhead that can become a team productivity &amp;ldquo;bottle neck&amp;rdquo;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The idea behind Continuous Testing is to execute tests that require access to underlying infrastructure including internal services that take too much time to run, or need to be run on a very specific infrastructure, inside a real Docker cluster. Such tests should be run 24x7 with test execution triggered by timer or change event (service update, host OS update, configuration change, etc.).&lt;/p&gt;
+
+&lt;p&gt;Tugbot is in-cluster Continuous Testing Framework for Docker based runtime environments (Continuous Delivery): Dev→Test→Stage→Prod.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Why did you name it “Tugbot”?&lt;/em&gt;&lt;/strong&gt;
+&lt;em&gt;Just like a tugboat brings container ships safely and securely into port, &lt;strong&gt;Tugbot&lt;/strong&gt; brings quality Docker containers into production at speed and scale without sacrificing quality.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;why-tugbot&#34;&gt;Why Tugbot?&lt;/h2&gt;
+
+&lt;p&gt;In a recent NGINX (developer focused) &lt;a href=&#34;https://www.nginx.com/resources/library/app-dev-survey/&#34;&gt;survey&lt;/a&gt;, the biggest challenge holding back developers is having to constantly trade-off between quality and expected speed of delivery in multiple and complex environments that lack automation tools. Tugbot extends testing into continuous deployment (CD) environments. It executes tests in response to change events or periodically, collects test results, and uploads collected results to Test Analytics service. Tugbot is intended to make continuous testing REAL by running event driven tests in the Continuous Delivery (CD) phase of the software development lifecycle.&lt;/p&gt;
+
+&lt;h4 id=&#34;use-cases-for-tugbot-framework-for-modern-2-pizza-development-teams&#34;&gt;Use Cases for Tugbot Framework for modern &amp;ldquo;2 pizza&amp;rdquo; development teams:&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Simplify and standardize running ANY test (integration, component, performance, chaos, security, etc) using a standard Dockerfile — A “test container”, agnostic of the tooling. Allows for testing of complex backing services.&lt;/li&gt;
+&lt;li&gt;Event driven testing - Trigger test on specific events to reduce execution times by providing granularity and parellism.
+
+&lt;ul&gt;
+&lt;li&gt;Docker events: image update, new container, etc (supported)&lt;/li&gt;
+&lt;li&gt;Timer events: CRON — time interval, etc&lt;/li&gt;
+&lt;li&gt;Host events: kernel updates, host restart, package update, config update&lt;/li&gt;
+&lt;li&gt;External event: User driven, etc&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Standardize collection of test results from all machines - Aggregating and analyzing test results over time enables traceability and correlation of tests, failures, and results with deployment event context to speed up resolution.&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Social Testing - By creating &amp;ldquo;test containers&amp;rdquo;, these can be shared by development teams with their peers and the community.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;how-do-i-get-tugbot&#34;&gt;How do I get Tugbot?&lt;/h2&gt;
+
+&lt;p&gt;It’s really simple to get started. Developers can go to our github repository and download &lt;a href=&#34;https://github.com/gaia-docker/tugbot&#34;&gt;Tugbot&lt;/a&gt;. Feedback can be provided directly to our team via our Slack channel at &lt;a href=&#34;https://tugbot.slack.com&#34;&gt;tugbot.slack.com&lt;/a&gt; or visit &lt;a href=&#34;http://tugbot.io&#34;&gt;tugbot.io&lt;/a&gt;. Tugbot consists of the following core &lt;a href=&#34;https://github.com/gaia-docker&#34;&gt;services&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gaia-docker/tugbot&#34;&gt;Tugbot run&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gaia-docker/tugbot-collect&#34;&gt;Tugbot collect&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gaia-docker/tugbot-result-service&#34;&gt;Tugbot results&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Docker Swarm: &lt;a href=&#34;https://github.com/gaia-docker/tugbot-leader&#34;&gt;Tugbot Swarm&lt;/a&gt; - This is the &lt;strong&gt;Tugbot run&lt;/strong&gt; service for Swarm.&lt;/li&gt;
+&lt;li&gt;Kubenertes: &lt;a href=&#34;https://github.com/gaia-docker/tugbot-kubernetes&#34;&gt;Tugbot Kubernetes&lt;/a&gt; - This is the &lt;strong&gt;Tugbot run&lt;/strong&gt; service for Kubernetes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The best way to get started quickly is by cloning our &lt;a href=&#34;https://github.com/gaia-docker/example-voting-app&#34;&gt;DEMO app&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git clone https://github.com/gaia-docker/example-voting-app.git&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Please note the &lt;a href=&#34;https://github.com/gaia-docker/example-voting-app/blob/master/DEMO-FLOW.md&#34;&gt;pre-requisites and guide&lt;/a&gt; for using the DEMO app.&lt;/p&gt;
+
+&lt;p&gt;The DEMO app allows you to deploy in standalone, &lt;a href=&#34;https://github.com/gaia-docker/tugbot-leader&#34;&gt;Swarm&lt;/a&gt;, or &lt;a href=&#34;https://github.com/gaia-docker/tugbot-kubernetes&#34;&gt;Kubernetes&lt;/a&gt; cluster environments. We also demonstrate the use of our &lt;a href=&#34;https://github.com/gaia-adm/pumba&#34;&gt;chaos engineering tool&lt;/a&gt; (Pumba) to simulate chaos with network delays and failures to ensure resiliency of your system.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-do-i-collaborate-with-you-on-tugbot&#34;&gt;How do I collaborate with you on Tugbot?&lt;/h2&gt;
+
+&lt;p&gt;You can join our &lt;a href=&#34;https://tugbot.slack.com/&#34;&gt;Slack Channel&lt;/a&gt;. You can also open issues on &lt;a href=&#34;https://github.com/gaia-docker&#34;&gt;github&lt;/a&gt;. We gladly accept pull requests.&lt;/p&gt;
+
+&lt;h2 id=&#34;where-do-you-intend-to-take-tugbot&#34;&gt;Where do you intend to take Tugbot?&lt;/h2&gt;
+
+&lt;p&gt;We envision community based contributions of base &amp;ldquo;test container images&amp;rdquo; in a Docker Registry. Just like Github has enabled &amp;ldquo;social coding&amp;rdquo;, Tugbot promotes &amp;ldquo;social testing&amp;rdquo;.  No special configuring of test packages per deployment environment. Tests can be on-demand and event driven (e.g. docker events, timer, host, etc). Results collections are standardized for tests of services owned by the teams. They can visualize them via our integrated solution (&amp;ldquo;Gaia&amp;rdquo; &amp;ndash; coming soon) based open source tools like ElasticSearch with Kibana. For a portfolio and enterprise view, customers can use our commercial tools like &lt;a href=&#34;https://saas.hpe.com/en-us/software/alm-octane&#34;&gt;ALM Octane&lt;/a&gt; (future integrations).&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-create-a-tugbot-test-container-image&#34;&gt;How to create a Tugbot test container image?&lt;/h2&gt;
+
+&lt;p&gt;It&amp;rsquo;s very easy to create a test container. All it requires is a few lines of code in a Dockerfile (&lt;a href=&#34;https://github.com/gaia-docker/example-voting-app/blob/master/tests/Dockerfile&#34;&gt;example&lt;/a&gt;). We leverage the Docker and Kubenertes events API and LABELs to describe the test container that will enable Tugbot to automatically detect, run, and capture results when running in a cluster.&lt;/p&gt;
+
+&lt;h2 id=&#34;where-can-i-learn-more&#34;&gt;Where can I learn more?&lt;/h2&gt;
+
+&lt;p&gt;You can go to our &lt;a href=&#34;https://github.com/gaia-docker/tugbot&#34;&gt;github repo&lt;/a&gt; to learn more or by reading some of our blog posts:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@GehaniNeil/continuous-testing-framework-for-docker-containers-c40325100e5c#.h9laeu1vk&#34;&gt;Continuous testing framework for Docker containers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@GehaniNeil/is-devops-becoming-the-buzzword-du-jour-d76438524be0#.g8tqj72gc&#34;&gt;Is DevOps becoming the buzzword du jour?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@alexeiled/pumba-chaos-testing-for-docker-1b8815c6b61e#.ajq8nf6cc&#34;&gt;Pumba - Chaos Testing for Docker Containers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@alexeiled/network-emulation-for-docker-containers-f4d36b656cc3#.8apiih8ox&#34;&gt;Network Emulation Chaos Testing for Docker Containers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@alexeiled/docker-pattern-deploy-and-update-dockerized-application-on-a-cluster-d9aa141625ef#.k67614893&#34;&gt;Docker Pattern: Deploy and Update Dockerized Application on a cluster&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@alexeiled/docker-pattern-the-build-container-b0d0e86ad601#.gl07w8abn&#34;&gt;Docker Pattern: The Build Container&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Reddit Comment: I agree with &lt;a href=&#34;https://www.reddit.com/u/ihsw&#34;&gt;/u/ihsw&lt;/a&gt; &amp;ndash; great article, this sub needs more content like this (instead of &amp;ldquo;This One Weird Trick&amp;rdquo; junk or another wordpress tutorial). And, it&amp;rsquo;s very helpful to see this concept explained clearly and succinctly. I imagine this is going to be one of those posts that I constantly google to send to people&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@alexeiled/testing-strategies-for-docker-containers-f633e261e75a#.xxq0y7vig&#34;&gt;Testing Strategies for Docker Containers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Join the &lt;a href=&#34;https://tugbot-public.slack.com/&#34;&gt;Tugbot community&lt;/a&gt; to learn more. For Developers &amp;amp; Contributors, please join us at this &lt;a href=&#34;https://tugbot.slack.com&#34;&gt;Slack channel&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Install ME</title>
+      <link>https://gaia-docker.github.io/tugbot-site/install.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaia-docker.github.io/tugbot-site/install.html</guid>
+      <description>
+
+&lt;h2 id=&#34;download-and-install&#34;&gt;Download and Install&lt;/h2&gt;
+
+&lt;p&gt;Pre-Requisites:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.docker.com/docker-for-mac/&#34;&gt;Docker for Mac v1.12 or higher&lt;/a&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Bash shell&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.docker.com/docker-for-windows/&#34;&gt;Docker for Windows v1.12 or higher&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.docker.com/engine/installation/linux/#/install-docker-engine-on-linux&#34;&gt;Docker for Linux environments&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Familar with &lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_Unix_commands&#34;&gt;Unix CLI&lt;/a&gt; (&lt;a href=&#34;http://ss64.com/osx/&#34;&gt;macOS&lt;/a&gt;) or &lt;a href=&#34;https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/fundamental/using-familiar-command-names&#34;&gt;Window Powershell&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;tugbot-in-your-environment&#34;&gt;Tugbot in your environment&lt;/h2&gt;
+
+&lt;p&gt;Download Tugbot to run in your own cluster. Tugbot consists of 3 services:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gaia-docker/tugbot&#34;&gt;Tugbot Run&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gaia-docker/tugbot-collect&#34;&gt;Tugbot Collect&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gaia-docker/tugbot-result-service&#34;&gt;Tugbot Results Service API&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;example-dockercon-2016-voting-app-with-tugbot&#34;&gt;Example - DockerCon 2016 Voting App with Tugbot&lt;/h2&gt;
+
+&lt;h3 id=&#34;standalone&#34;&gt;Standalone&lt;/h3&gt;
+
+&lt;p&gt;See Pre-Requisites&lt;/p&gt;
+
+&lt;p&gt;Example Voting App DEMO&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Go to the &lt;a href=&#34;https://github.com/gaia-docker/example-voting-app&#34;&gt;gaia-docker/example-voting-app&lt;/a&gt; repo&lt;/li&gt;
+&lt;li&gt;Copy the URL by clicking on the Clone or Download&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;git clone https://github.com/gaia-docker/example-voting-app.git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cd example-voting-app/&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Follow the instructions in the &lt;a href=&#34;https://github.com/gaia-docker/example-voting-app/blob/master/DEMO-FLOW.md&#34;&gt;DEMO_FLOW.md&lt;/a&gt; file to run the demo scripts in the following order:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;run &lt;code&gt;./1_deploy.sh&lt;/code&gt; - This deploys the voting app. The first time, it will automatically pull the relevant Docker images. It consists of 5 services. You can check that the 5 services are running by doing a &lt;code&gt;docker ps&lt;/code&gt;. You should see 5 services running.&lt;/li&gt;
+&lt;li&gt;run &lt;code&gt;./2_deploy_tugbot.sh&lt;/code&gt; - This deploys 5 additional services. 3 Tugbot services (Run, Collect, Results) and 2 additional services (ElasticSearch and Kibana). The first time, it will automatically pull the relevant Docker images. Running `&lt;code&gt;docker ps&lt;/code&gt; should show 10 services running.&lt;/li&gt;
+&lt;li&gt;run &lt;code&gt;./3_configure_kibana.sh&lt;/code&gt; to setup ElasticSearch and Kibana&lt;/li&gt;
+&lt;li&gt;run &lt;code&gt;./4_run_tests.sh&lt;/code&gt; to run tugbot. Please note the 1st run needs to be triggered. Normally, this would be executed by an orchestration engine like Swarm, Kubernetes, or Mesos-Marathon.&lt;/li&gt;
+&lt;li&gt;run &lt;code&gt;./5_bug_on_off.sh&lt;/code&gt; to introduce failures by deploying bad and good code. You can pass a parameter on the command like &lt;code&gt;./5.bug_on_off 3&lt;/code&gt; to run 3 iterations.&lt;/li&gt;
+&lt;li&gt;run &lt;code&gt;./7_pumba.sh&lt;/code&gt; to introduce chaos in the system&lt;/li&gt;
+&lt;li&gt;run &lt;code&gt;./8_tugbot_clean.sh&lt;/code&gt; to cleanup by removing pumba, tests, and Tugbot&lt;/li&gt;
+&lt;li&gt;run &lt;code&gt;./9_clean.sh&lt;/code&gt; to remove volume and networks. The volumes will remain in the filesystem. The &lt;code&gt;all&lt;/code&gt; parameter will also delete the volumes.&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;swarm&#34;&gt;Swarm&lt;/h3&gt;
+
+&lt;p&gt;See Pre-Requisites&lt;/p&gt;
+
+&lt;p&gt;Follow the instructions in the &lt;a href=&#34;https://github.com/gaia-docker/example-voting-app/edit/master/DEMO-FLOW-SWARM.md&#34;&gt;DEMO-FLOW-SWARM.md&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;From the cloned directory - &lt;code&gt;cd swarm&lt;/code&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;run &lt;code&gt;./0_swarm_cluster_mac.sh&lt;/code&gt; (macOS)- This will create a new Swarm cluster on localhost. To control the number of worker nodes, use the &lt;code&gt;NUM_WORKERS&lt;/code&gt; environment variable.
+&lt;strong&gt;Note:&lt;/strong&gt; in case of failure try to run this script once again.&lt;/li&gt;
+&lt;li&gt;To see your Swarm cluster, open &lt;a href=&#34;http://localhost:8000&#34;&gt;Swarm Visualizer&lt;/a&gt;. You will need to download the &lt;a href=&#34;https://github.com/ManoMarks/docker-swarm-visualizer&#34;&gt;ManoMarks visualizer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The voting app will run at &lt;code&gt;http://localhost:&amp;lt;x&amp;gt;5000&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;The results app will run at &lt;code&gt;http://localhost:&amp;lt;x&amp;gt;5001&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;where &lt;code&gt;x&lt;/code&gt; represent worker index: 1,2,3&amp;hellip; (check Swarm Visuzalizer for right index)&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Deploy Voting application:&lt;/p&gt;
+
+&lt;p&gt;Run &lt;code&gt;./1_deploy.sh&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Deploy Tugbot Testing Framework:&lt;/p&gt;
+
+&lt;p&gt;Run &lt;code&gt;./2_deploy_tugbot.sh&lt;/code&gt; - The following Docker services will run: &lt;code&gt;es&lt;/code&gt;, &lt;code&gt;kibana,&lt;/code&gt;&lt;code&gt;tugbot-leader&lt;/code&gt;, &lt;code&gt;tugbot-run&lt;/code&gt;, &lt;code&gt;tugbot-collect&lt;/code&gt; and &lt;code&gt;tugbot-result-service-es&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Import Dashboard Setting Into Kibana:&lt;/p&gt;
+
+&lt;p&gt;Run &lt;code&gt;./3_configure_kibana.sh&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Kibana dashboard is now accessible at &lt;code&gt;http://localhost:&amp;lt;x&amp;gt;5601&lt;/code&gt;. &lt;strong&gt;NOTE:&lt;/strong&gt; The UI is still not usable until &lt;code&gt;tugbot&lt;/code&gt; sends at least 1 result to Elasticsearch.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Execute Integration and Functional Tests:&lt;/p&gt;
+
+&lt;p&gt;Run &lt;code&gt;./4_run_tests.sh&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Expected:&lt;/strong&gt; ALL test must pass now. You should see now the test results in Kibana Dashboard&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Modify Application by injecting and fixing failures:&lt;/p&gt;
+
+&lt;p&gt;Run &lt;code&gt;./5_bug_on_off.sh&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; This script will re &lt;code&gt;./1_deploy.sh&lt;/code&gt; with  &lt;strong&gt;bad&lt;/strong&gt; and &lt;strong&gt;good&lt;/strong&gt; version of Vote app&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Fix Application:&lt;/p&gt;
+
+&lt;p&gt;Run &lt;code&gt;./1_deploy.sh&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Expected:&lt;/strong&gt; We returned the &amp;ldquo;Good&amp;rdquo; image, hence - All tests should pass now. You should see now the test results in Kibana Dashboard at &lt;a href=&#34;http://localhost:5601&#34;&gt;http://localhost:5601&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Simulate network chaos: Run Pumba (as &amp;ldquo;interactive&amp;rdquo; Docker container) to introduce 3 seconds delay for all egress traffic from &lt;code&gt;result-app&lt;/code&gt; container. Network emulation is activated every minute and lasts for 30 seconds only, after that connection is restored to work normally.&lt;/p&gt;
+
+&lt;p&gt;Run &lt;code&gt;./7_run_pumba.sh&lt;/code&gt; - Use Ctrl-C to stop Pumba&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Expected&lt;/strong&gt;: some test might fail now, but should pass, once network emulation stopped.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Clean up Tugbot only:&lt;/p&gt;
+
+&lt;p&gt;Run &lt;code&gt;./8_clean_tugbot.sh&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Clean up Tugbot and the voting app:&lt;/p&gt;
+
+&lt;p&gt;Run &lt;code&gt;./9_clean.sh&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;To destroy local Swarm cluster:&lt;/p&gt;
+
+&lt;p&gt;Run &lt;code&gt;./9_x_clean_swarm_mac.sh&lt;/code&gt;(macOS)&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; The scripts above will leave the volume on the docker host that is used by ElasticSearch.&lt;/p&gt;
+
+&lt;p&gt;You can verify the volume&amp;rsquo;s existence by running: &lt;code&gt;docker volume ls&lt;/code&gt;. To remove the volume, run &lt;code&gt;docker volume rm&lt;/code&gt; &lt;em&gt;volume name&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;kubernetes&#34;&gt;Kubernetes&lt;/h3&gt;
+
+&lt;h4 id=&#34;coming-soon&#34;&gt;Coming soon&amp;hellip;&lt;/h4&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Working with autohugo</title>
+      <link>https://gaia-docker.github.io/tugbot-site/blog/1/01/01/working-with-autohugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaia-docker.github.io/tugbot-site/blog/1/01/01/working-with-autohugo/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;autohugo&lt;/strong&gt; is made with &lt;a href=&#34;https://es.wikipedia.org/wiki/Make&#34;&gt;make&lt;/a&gt; and a couple of environment variables. In this document you can understand how it works.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-environment-variables&#34;&gt;The environment variables&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;HUGO_VERSION&lt;/code&gt;: defines the &lt;strong&gt;hugo&lt;/strong&gt; version to be used.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HUGO_THEME&lt;/code&gt;: URL of the git repository (with the &lt;code&gt;https://&lt;/code&gt; prefix) of the theme, you can choose one from &lt;a href=&#34;https://github.com/spf13/hugoThemes/&#34;&gt;&lt;code&gt;hugoThemes&lt;/code&gt;&lt;/a&gt; or &lt;a href=&#34;https://gohugo.io/themes/creation/&#34;&gt;create&lt;/a&gt; your one.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;GIT_COMMITTER_NAME&lt;/code&gt; and &lt;code&gt;GIT_COMMITTER_EMAIL&lt;/code&gt;: the name and the email to be used in the commit to &lt;code&gt;gh-pages&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Not edit the Makefile itself, please us environment variable at the &lt;code&gt;circle.yml&lt;/code&gt; for change the configuration.&lt;/p&gt;
+
+&lt;p&gt;ProTip: You can pass the environment variables to make without setting is globally: &lt;code&gt;HUGO_THEME=http://github.com/mcuadros/hyde make server&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;the-makefile&#34;&gt;The Makefile&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;make dependencies&lt;/code&gt;: installs &lt;code&gt;hugo&lt;/code&gt; on a local folder, by default &lt;code&gt;.hugo&lt;/code&gt;. Also download the configured theme at the &lt;code&gt;themes&lt;/code&gt; folder.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make build&lt;/code&gt;: generates the website calling &lt;code&gt;hugo&lt;/code&gt; command.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make server&lt;/code&gt;: runs a web server at the url &lt;code&gt;http://localhost:1313/&lt;/code&gt;, this command is very useful when you are creating new command, refreshing the site every time a file is changed.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make publish&lt;/code&gt;: this command deletes the branch &lt;code&gt;gh-pages&lt;/code&gt; from you repository and creates a new one with the content of the &lt;code&gt;public&lt;/code&gt; folder. &lt;em&gt;This command only can be called on the CircleCI environment&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;You need &lt;code&gt;make&lt;/code&gt; installed in order to work with &lt;strong&gt;autohugo&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

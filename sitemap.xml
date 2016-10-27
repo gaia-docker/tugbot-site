@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://gaia-docker.github.io/tugbot-site/index.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://gaia-docker.github.io/tugbot-site/contact.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://gaia-docker.github.io/tugbot-site/blog/1/01/01/setting-your-own/</loc>
+  </url>
+  
+  <url>
+    <loc>https://gaia-docker.github.io/tugbot-site/faq.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://gaia-docker.github.io/tugbot-site/install.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://gaia-docker.github.io/tugbot-site/blog/1/01/01/working-with-autohugo/</loc>
+  </url>
+  
+</urlset>

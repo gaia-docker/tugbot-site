@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog-rsses on Tugbot</title>
+    <link>https://gaia-docker.github.io/tugbot-site/blog.xml</link>
+    <description>Recent content in Blog-rsses on Tugbot</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c), Hewlett-Packard Enterprise</copyright>
+    <atom:link href="https://gaia-docker.github.io/tugbot-site/blog.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Creating your own site</title>
+      <link>https://gaia-docker.github.io/tugbot-site/blog/1/01/01/setting-your-own/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaia-docker.github.io/tugbot-site/blog/1/01/01/setting-your-own/</guid>
+      <description>
+
+&lt;h3 id=&#34;setting-the-repository&#34;&gt;Setting the repository&lt;/h3&gt;
+
+&lt;p&gt;The best way to archive this is forking the &lt;a href=&#34;https://github.com/mcuadros/autohugo&#34;&gt;&lt;code&gt;autohugo&lt;/code&gt;&lt;/a&gt; repository. This repository will host your &lt;a href=&#34;https://es.wikipedia.org/wiki/Markdown&#34;&gt;Markdown&lt;/a&gt; files and the hugo config file.&lt;/p&gt;
+
+&lt;h3 id=&#34;setting-circleci&#34;&gt;Setting CircleCI&lt;/h3&gt;
+
+&lt;p&gt;CircleCI takes care of the branch &lt;code&gt;gh-pages&lt;/code&gt;, deploying the new version of the HTML every time you make a push to your repository in the &lt;a href=&#34;https://pages.github.com/&#34;&gt;Github Pages&lt;/a&gt; branch.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Login on &lt;a href=&#34;https://circleci.com/&#34;&gt;CircleCI&lt;/a&gt; using you Github account.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Register you repository at CircleCI clicking on &lt;a href=&#34;https://circleci.com/add-projects&#34;&gt;&lt;code&gt;Add Projects&lt;/code&gt;&lt;/a&gt; and choosing your repository.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Now you need to allow to CircleCI to make pushes to your &lt;code&gt;gh-pages&lt;/code&gt; branch, so just go to CircleCI, in &lt;code&gt;Project Settings&lt;/code&gt; &amp;gt; &lt;code&gt;Checkout keys&lt;/code&gt; click on the big green button &lt;code&gt;Authorize w/ Github&lt;/code&gt;, then a new button with emerge called &lt;code&gt;Create and add your/repository deploy key&lt;/code&gt; click on it also, this will create a token write access, allowing to CircleCI write on your repository.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;configuring-hugo&#34;&gt;Configuring Hugo&lt;/h3&gt;
+
+&lt;p&gt;Hugo is a static website engine, transforms your Markdown files into beautiful websites.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Configure a theme for your new site, you can choose one at &lt;a href=&#34;https://github.com/spf13/hugoThemes/&#34;&gt;&lt;code&gt;hugoThemes&lt;/code&gt;&lt;/a&gt; repository, set the theme&amp;rsquo;s repository URL (with the &lt;code&gt;http://&lt;/code&gt; prefix) at the file &lt;code&gt;circle.yml&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Put the your content at the directory &lt;code&gt;content&lt;/code&gt;, read more about the scaffolding at the &lt;a href=&#34;https://gohugo.io/content/organization/&#34;&gt;&lt;code&gt;content section&lt;/code&gt;&lt;/a&gt; in the hugo documentation.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Configure the &lt;code&gt;config.yaml&lt;/code&gt; this file containts the hugo configuration, there you can config for example the site name.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If you are not familiar with the &lt;code&gt;hugo&lt;/code&gt; scaffolding and confiration take a look to the hugo &lt;a href=&#34;https://gohugo.io/overview/introduction/&#34;&gt;&lt;code&gt;documentation&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;publishing-the-site&#34;&gt;Publishing the site&lt;/h3&gt;
+
+&lt;p&gt;This is the easiest part, thanks to &lt;a href=&#34;https://pages.github.com/&#34;&gt;Github Pages&lt;/a&gt; all the content in the &lt;code&gt;gh-pages&lt;/code&gt; branch from you repository is available via HTTP at:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;http://&amp;lt;username&amp;gt;.github.io/&amp;lt;repository&amp;gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Since now every time you make a push to your repository with new content, the HTML will be generated and uploaded to the &lt;code&gt;gh-pages&lt;/code&gt; thanks to &lt;code&gt;CircleCI&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The Markdown files on content as well as the &lt;code&gt;config.yaml&lt;/code&gt; are examples, feel free to change any you want.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Working with autohugo</title>
+      <link>https://gaia-docker.github.io/tugbot-site/blog/1/01/01/working-with-autohugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaia-docker.github.io/tugbot-site/blog/1/01/01/working-with-autohugo/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;autohugo&lt;/strong&gt; is made with &lt;a href=&#34;https://es.wikipedia.org/wiki/Make&#34;&gt;make&lt;/a&gt; and a couple of environment variables. In this document you can understand how it works.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-environment-variables&#34;&gt;The environment variables&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;HUGO_VERSION&lt;/code&gt;: defines the &lt;strong&gt;hugo&lt;/strong&gt; version to be used.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HUGO_THEME&lt;/code&gt;: URL of the git repository (with the &lt;code&gt;https://&lt;/code&gt; prefix) of the theme, you can choose one from &lt;a href=&#34;https://github.com/spf13/hugoThemes/&#34;&gt;&lt;code&gt;hugoThemes&lt;/code&gt;&lt;/a&gt; or &lt;a href=&#34;https://gohugo.io/themes/creation/&#34;&gt;create&lt;/a&gt; your one.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;GIT_COMMITTER_NAME&lt;/code&gt; and &lt;code&gt;GIT_COMMITTER_EMAIL&lt;/code&gt;: the name and the email to be used in the commit to &lt;code&gt;gh-pages&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Not edit the Makefile itself, please us environment variable at the &lt;code&gt;circle.yml&lt;/code&gt; for change the configuration.&lt;/p&gt;
+
+&lt;p&gt;ProTip: You can pass the environment variables to make without setting is globally: &lt;code&gt;HUGO_THEME=http://github.com/mcuadros/hyde make server&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;the-makefile&#34;&gt;The Makefile&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;make dependencies&lt;/code&gt;: installs &lt;code&gt;hugo&lt;/code&gt; on a local folder, by default &lt;code&gt;.hugo&lt;/code&gt;. Also download the configured theme at the &lt;code&gt;themes&lt;/code&gt; folder.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make build&lt;/code&gt;: generates the website calling &lt;code&gt;hugo&lt;/code&gt; command.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make server&lt;/code&gt;: runs a web server at the url &lt;code&gt;http://localhost:1313/&lt;/code&gt;, this command is very useful when you are creating new command, refreshing the site every time a file is changed.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make publish&lt;/code&gt;: this command deletes the branch &lt;code&gt;gh-pages&lt;/code&gt; from you repository and creates a new one with the content of the &lt;code&gt;public&lt;/code&gt; folder. &lt;em&gt;This command only can be called on the CircleCI environment&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;You need &lt;code&gt;make&lt;/code&gt; installed in order to work with &lt;strong&gt;autohugo&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
